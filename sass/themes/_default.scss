@@ -1,0 +1,7 @@
+@use "../abstracts/variables" as v;
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    color: v.$color-blanco;
+    overflow-x: hidden;
+} 
