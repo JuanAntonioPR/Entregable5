@@ -27,20 +27,39 @@
 }
 
 @mixin button {
+  position: relative;
+  display: inline-block;
   font-family: v.$fuente;
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: 2px;
-  color: v.$color-blanco;
+  color: v.$color-azul-oscuro;
   text-decoration: none;
   background-color: transparent;
   width: max-content;
   padding: 10px 0px;
   border: none;
-  border-bottom: 2px solid v.$color-verde;
   transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
 
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: v.$color-azul-claro;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out;
+  }
+
   &:hover {
-      color: v.$color-verde;
+    color: v.$color-azul-claro;
+    transform: scale(1.10);
+    
+    &::after {
+      transform: scaleX(1);
+    }
   }
 }

@@ -1,1 +1,25 @@
 @use "../abstracts/abstracts" as ab;
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(45deg, ab.$color-bg-claro1, ab.$color-bg-claro2);
+
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    ul {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        margin-right: 50px;
+
+        li {
+            list-style: none;
+        }
+    }
+}
