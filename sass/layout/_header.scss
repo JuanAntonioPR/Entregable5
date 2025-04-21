@@ -4,8 +4,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background: linear-gradient(45deg, ab.$color-bg-claro1, ab.$color-bg-claro2);
+    padding: 15px 20px;
+    background-color: ab.$color-bg-claro1;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out;
+
+    &.scrolled {
+        background-color: rgba(ab.$color-bg-claro1, 0.7);
+        backdrop-filter: blur(10px);
+    }
 
     .logo {
         display: flex;
@@ -14,12 +23,33 @@
 
     ul {
         display: flex;
-        gap: 40px;
+        gap: 30px;
         align-items: center;
         margin-right: 50px;
 
         li {
             list-style: none;
+            padding: 5px 10px;
+        }
+
+        li:last-child {
+            background-color: ab.$color-bg-claro2;
+            border-radius: 15px;
+            border: 2px solid ab.$color-azul-oscuro;
+            padding: 5px 15px;
+
+            &:hover {
+                border-color: ab.$color-blanco;
+
+                a {
+                    color: ab.$color-blanco;
+                    transform: scale(1.10);
+                }
+            }
+
+            a {
+                transition: transform 0.2s ease-in-out;
+            }
         }
     }
 }

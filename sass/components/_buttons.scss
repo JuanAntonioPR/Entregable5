@@ -3,4 +3,8 @@
 
 .button {
     @include m.button;
-  }
+}
+
+.button_contact {
+  @include m.button_contact;
+}

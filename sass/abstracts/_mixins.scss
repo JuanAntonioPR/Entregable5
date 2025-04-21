@@ -48,18 +48,32 @@
     bottom: 0;
     height: 2px;
     width: 100%;
-    background-color: v.$color-azul-claro;
+    background-color: v.$color-azul-oscuro;
     transform: scaleX(0);
     transform-origin: center;
     transition: transform 0.3s ease-in-out;
   }
 
   &:hover {
-    color: v.$color-azul-claro;
     transform: scale(1.10);
     
     &::after {
       transform: scaleX(1);
     }
   }
+}
+
+@mixin button_contact {
+  position: relative;
+  display: inline-block;
+  font-family: v.$fuente;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: v.$color-azul-oscuro;
+  text-decoration: none;
+  background-color: transparent;
+  width: max-content;
+  padding: 10px 0px;
+  border: none;
 }
