@@ -11,6 +11,7 @@
     z-index: 1000;
     transition: background-color 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out;
 
+
     &.scrolled {
         background-color: rgba(ab.$color-bg-claro1, 0.7);
         backdrop-filter: blur(10px);
@@ -19,36 +20,123 @@
     .logo {
         display: flex;
         align-items: center;
+
+        img {
+            width: 180px;
+
+            @include ab.breakpoint(desktop) {
+                width: 250px;
+            }
+        }
     }
 
-    ul {
-        display: flex;
-        gap: 30px;
-        align-items: center;
-        margin-right: 50px;
-
-        li {
-            list-style: none;
-            padding: 5px 10px;
+    .hamburger {
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+    
+        img {
+            width: 30px;
+            height: auto;
         }
 
+        @include ab.breakpoint(tablet) {
+            display: none;
+        }
+    }
+
+    .nav {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: ab.$color-bg-claro1;
+        padding: 0px 20px 20px 20px;
+    
+        &.active {
+            display: flex;
+        }
+    
+        @include ab.breakpoint(tablet) {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            position: static;
+            padding: 10px 0px;
+            background-color: transparent;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+        
+            @include ab.breakpoint(tablet) {
+              flex-direction: row;
+              margin-right: 0px;
+              margin-left: 0px;
+              gap: 5px;
+            }
+
+            @include ab.breakpoint(desktop) {
+                gap: 15px;
+            }
+        }
+    
+        li {
+            list-style: none;
+            padding: 0px 10px;
+
+            @include ab.breakpoint(tablet) {
+                padding: 0px 5px;
+            }
+
+            a {
+                font-size: ab.$bodyS;
+
+                @include ab.breakpoint(tablet) {
+                    font-size: ab.$bodyS - 2px;
+                }
+
+                @include ab.breakpoint(desktop) {
+                    font-size: ab.$bodyS;
+                }
+            }
+        }
+    
         li:last-child {
             background-color: ab.$color-bg-claro2;
             border-radius: 15px;
             border: 2px solid ab.$color-azul-oscuro;
-            padding: 5px 15px;
+            padding: 5px 10px;
+            margin-top: 10px;
 
+            @include ab.breakpoint(tablet) {
+                margin-top: 0px;
+            }
+
+            @include ab.breakpoint(desktop) {
+                margin-left: 20px;
+            }
+        
+            a {
+                transition: transform 0.2s ease-in-out;
+            }
+        
             &:hover {
                 border-color: ab.$color-blanco;
-
+        
                 a {
                     color: ab.$color-blanco;
                     transform: scale(1.10);
                 }
-            }
-
-            a {
-                transition: transform 0.2s ease-in-out;
             }
         }
     }
