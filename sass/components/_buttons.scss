@@ -2,9 +2,13 @@
 @use "../abstracts/variables" as v;
 
 .button {
-    @include m.button;
+  @include m.button;
 }
 
 .button_contact {
   @include m.button_contact;
+}
+
+.button_page {
+  @include m.button_page;
 }

@@ -28,109 +28,109 @@
         </ul>
       </nav>
     </header>
-    <div class="container">
+    <div class="container container__index">
       <main>
         <h1>Bienvenido a ConquerBlocks</h1>
-        <section>
-          <img src="img/academy.jpg" alt="Imagen de la academia" style="width: 100%; max-width: 500px;">
+        <section class="welcome">
+          <img src="img/academy.jpg" alt="Imagen de la academia">
           <p>Bienvenido a la web de la <strong>Academia ConquerBlocks</strong>. Aquí podrás estudiar diferentes cursos de programación con los que volverte un experto en el desarrollo de aplicaciones web, tanto desde el punto de vista del Frontend como del Backend.</p>
         </section>
-        <section>
-          <fieldset>
-            <legend>Quienes somos:</legend>
-            <p>Somos una academia online especializada en el desarrollo web. Tenemos más de 5 años de experiencia en el sector y estamos comprometidos al 100% en tu formación, para que puedas desenvolverte sin problemas en un mundo en constante crecimiento como es el de la programación y el desarrollo web.</p>
-            <a href="html/quienes_somos.html">Pincha aquí para saber más</a>
-          </fieldset>
+        <section class="description">
+          <h3>Quienes somos:</h3>
+          <p>Somos una academia online especializada en el desarrollo web. Tenemos más de 5 años de experiencia en el sector y estamos comprometidos al 100% en tu formación, para que puedas desenvolverte sin problemas en un mundo en constante crecimiento como es el de la programación y el desarrollo web.</p>
+          <a href="html/quienes_somos.html" class="button_page">
+            <span>Pincha aquí para saber más</span>
+          </a>
         </section>
-        <br>
-        <section>
+        <section class="courses">
           <h2>Principales cursos</h2>
-          <table width="85%" align="center" border="2">
-            <caption>Cursos Academia ConquerBlocks</caption>
-            <thead>
-                <tr>
-                    <th>Nombre curso</th>
-                    <th>nº horas video</th>
-                    <th>nº horas trabajo en casa</th>
-                    <th>Módulos</th>
-                    <th>Tutor</th>
-                    <th>Precio</th>
-                    <th>Enlace al curso</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>Frontend Developer</strong></td>
-                    <td>70</td>
-                    <td>210</td>
-                    <td>
-                      <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                        <li>TypeScript</li>
-                        <li>ReactJs</li>
-                        <li>Astro</li> 
-                        <li>Angular</li>
-                      </ul>
-                    </td>
-                    <td>Gabriel López</td>
-                    <td>700 €</td>
-                    <td><a href="html/curso_frontend.html">Más detalles</a></td>
-                </tr>
-                <tr>
-                    <td><strong>Backend Developer</strong></td>
-                    <td>50</td>
+          <div class="table-container">
+            <table>
+              <caption>Cursos Academia ConquerBlocks</caption>
+              <thead>
+                  <tr>
+                      <th>Nombre curso</th>
+                      <th>nº horas video</th>
+                      <th>nº horas trabajo en casa</th>
+                      <th>Módulos</th>
+                      <th>Tutor</th>
+                      <th>Precio</th>
+                      <th>Enlace al curso</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td><strong>Frontend Developer</strong></td>
+                      <td>70</td>
+                      <td>210</td>
+                      <td>
+                        <ul>
+                          <li>HTML</li>
+                          <li>CSS</li>
+                          <li>JavaScript</li>
+                          <li>TypeScript</li>
+                          <li>ReactJs</li>
+                          <li>Astro</li> 
+                          <li>Angular</li>
+                        </ul>
+                      </td>
+                      <td>Gabriel López</td>
+                      <td>700 €</td>
+                      <td><a href="html/curso_frontend.html">Más detalles</a></td>
+                  </tr>
+                  <tr>
+                      <td><strong>Backend Developer</strong></td>
+                      <td>50</td>
+                      <td>150</td>
+                      <td>
+                        <ul>
+                          <li>Python</li>
+                          <li>Django</li>
+                          <li>SQL</li>
+                          <li>Java</li>
+                          <li>NodeJS</li>
+                          <li>Rust</li> 
+                        </ul>
+                      </td>
+                      <td>Daniela Rodríguez</td>
+                      <td>500 €</td>
+                      <td><a href="html/curso_backend.html">Más detalles</a></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Full Stack Developer</strong> (Frontend + Backend + Material extra)</td>
                     <td>150</td>
+                    <td>450</td>
                     <td>
                       <ul>
-                        <li>Python</li>
-                        <li>Django</li>
-                        <li>SQL</li>
-                        <li>Java</li>
-                        <li>NodeJS</li>
-                        <li>Rust</li> 
+                        <li>Contenidos Frontend y Backend</li>
+                        <li>Linux (terminal)</li>
+                        <li>SSH</li>
+                        <li>Git y GitHub</li>
+                        <li>Docker</li>
+                        <li>Azure</li> 
                       </ul>
                     </td>
-                    <td>Daniela Rodríguez</td>
-                    <td>500 €</td>
-                    <td><a href="html/curso_backend.html">Más detalles</a></td>
-                </tr>
-                <tr>
-                  <td><strong>Full Stack Developer</strong> (Frontend + Backend + Material extra)</td>
-                  <td>150</td>
-                  <td>450</td>
-                  <td>
-                    <ul>
-                      <li>Contenidos Frontend y Backend</li>
-                      <li>Linux (terminal)</li>
-                      <li>SSH</li>
-                      <li>Git y GitHub</li>
-                      <li>Docker</li>
-                      <li>Azure</li> 
-                    </ul>
-                  </td>
-                  <td>Valeria Sánchez</td>
-                  <td>1000 €</td>
-                  <td><a href="html/curso_fullstack.html">Más detalles</a></td>
-                </tr>
-            </tbody>
-        </table>
-        <p>Visita el resto de cursos pinchando <a href="html/cursos.html">aquí</a>.</p>
+                    <td>Valeria Sánchez</td>
+                    <td>1000 €</td>
+                    <td><a href="html/curso_fullstack.html">Más detalles</a></td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Visita el resto de cursos pinchando <a href="html/cursos.html">aquí</a>.</p>
         </section>
-        <section>
+        <section class="blog">
           <h2>Últimas noticias</h2>
-          <fieldset>
+          <article>
             <h3>Primera promoción de Full Stack Developer</h3>
             <h5>3 de enero de 2025</h5>
             <p>La primera promoción de alumnos Full Stack está próxima a finalizar. Ya tenemos disponibles algunos de los principales proyectos que han hecho ... <a href="html/noticia1.html">(leer más)</a>.</p>
-          </fieldset>
-          <br>
-          <fieldset>
+          </article>
+          <article>
             <h3>Quedada el 1 de Febrero de 2025</h3>
             <h5>2 de enero de 2025</h5>
             <p>El próximo 1 de Febrero vamos a reunirnos en la Puerta del sol (Madrid). Hemos quedado a las 11:00 de la mañana y pasaremos el día ... <a href="html/noticia2.html">(leer más)</a>.</p>
-          </fieldset>
+          </article>
           <p>Lee el resto de noticias pinchando <a href="html/blog.html">aquí</a>.</p>
         </section>
       </main>    

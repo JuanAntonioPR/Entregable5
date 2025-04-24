@@ -1,1 +1,16 @@
 @use "../abstracts/abstracts" as ab;
+
+h1 {
+    font-size: ab.$headingXL;
+    text-align: center;
+    padding: 40px 0px;
+    color: ab.$color-azul-oscuro;
+    text-shadow: 2px 2px 4px ab.$color-azul-claro;
+}
+
+h2 {
+    font-size: ab.$headingL;
+    text-align: center;
+    padding: 20px 0px;
+    color: ab.$color-azul-oscuro;
+}

@@ -77,3 +77,38 @@
   padding: 10px 0px;
   border: none;
 }
+
+@mixin button_page {
+  position: relative;
+  display: inline-block;
+  font-family: v.$fuente;
+  font-size: 1rem;
+  font-weight: 600;
+  color: v.$color-azul-oscuro;
+  text-decoration: none;
+  width: max-content;
+  padding: 10px 20px;
+  background-color: v.$color-bg-claro2;
+  border: 2px solid v.$color-azul-oscuro;
+  border-radius: 15px;
+  animation: info 2s ease-in-out infinite alternate;
+
+  @keyframes info {
+    0% {
+      box-shadow: 0 0 0 0 v.$color-bg-claro1;
+    }
+    100% {
+      box-shadow: 0 0 10px 6px v.$color-bg-claro1;
+    }
+  }
+
+  span {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &:hover span {
+    transform: scale(1.05);
+    color: v.$color-blanco;
+  }
+}

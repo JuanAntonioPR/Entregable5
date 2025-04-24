@@ -2,7 +2,6 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    overflow-x: hidden;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -13,5 +12,4 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     flex: 1;
-    padding: 0 20px;
 }
