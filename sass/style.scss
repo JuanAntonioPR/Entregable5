@@ -15,12 +15,28 @@
         padding: 20px;
         gap: 20px;
 
+        @include ab.breakpoint(tablet) {
+            flex-direction: row;
+        }
+
+        @include ab.breakpoint(desktop) {
+            padding: 40px;
+            gap: 50px;
+        }
+
         img {
             width: 100%;
+
+            @include ab.breakpoint(tablet) {
+                width: 50%;
+                object-fit: cover;
+            }
         }
 
         p {
-            font-size: ab.$bodyM;
+            @include ab.breakpoint(tablet) {
+                align-self: center;
+            }
         }
     }
 
@@ -109,7 +125,6 @@
             margin-top: 40px;
             margin-bottom: 20px;
             text-align: center;
-            font-size: ab.$bodyM;
       
             a {
                 font-weight: bold;
@@ -131,12 +146,46 @@
         padding: 20px 20px 40px 20px;
         gap: 10px;
 
-        article {
+        @include ab.breakpoint(tablethorizontal) {
+            display: grid;
+            grid-template-areas: 
+                "h2 h2"
+                "article1 article2"
+                "p p";
+            gap: 20px;
+            
+            h2 {
+                grid-area: h2;
+            }
+
+            & > p {
+                grid-area: p;
+            }
+        }
+
+        @include ab.breakpoint(desktop) {
+            margin-bottom: 120px;
+        }
+
+
+        .article {
             display: flex;
             flex-direction: column;
             margin-bottom: 20px;
+            background-color: ab.$color-bg-claro1-lighten;
+            padding: 15px;
+            border-radius: 15px;
+            gap: 5px;
+
+            @include ab.breakpoint(tablethorizontal) {
+                gap: 15px;
+            }
 
             p {
+                @include ab.breakpoint(tablethorizontal) {
+                    font-size: ab.$bodyL;
+                }
+
                 a {
                     font-weight: bold;
                     color: ab.$color-azul-oscuro;
@@ -162,6 +211,5 @@
                 }
             }
         }
-    }
-      
+    }    
 }

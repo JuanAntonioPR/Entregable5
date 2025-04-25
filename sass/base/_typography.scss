@@ -6,6 +6,10 @@ h1 {
     padding: 40px 0px;
     color: ab.$color-azul-oscuro;
     text-shadow: 2px 2px 4px ab.$color-azul-claro;
+
+    @include ab.breakpoint(tablethorizontal) {
+        font-size: ab.$headingXL + 4px;
+    }
 }
 
 h2 {
@@ -13,4 +17,24 @@ h2 {
     text-align: center;
     padding: 20px 0px;
     color: ab.$color-azul-oscuro;
+
+    @include ab.breakpoint(tablethorizontal) {
+        font-size: ab.$headingL + 4px;
+    }
+}
+
+p {
+    font-size: ab.$bodyM;
+
+    @include ab.breakpoint(tablet) {
+        font-size: ab.$bodyL;
+    }
+
+    @include ab.breakpoint(tablethorizontal) {
+        font-size: ab.$bodyL + 4px;
+    }
+
+    @include ab.breakpoint(desktop) {
+        font-size: ab.$bodyL + 8px;
+    }
 }
