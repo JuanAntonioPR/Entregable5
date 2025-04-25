@@ -1,0 +1,67 @@
+@use "../abstracts/abstracts" as ab;
+
+.container__quienes-somos {
+    .description {
+        display: flex;
+        flex-direction: column;
+        background-color: ab.$color-bg-claro1;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .teachers {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+        max-width: 500px;
+
+        @include ab.breakpoint(tablethorizontal) {
+            display: grid;
+            grid-template-areas: 
+                "h3 h3"
+                "article1 article2"
+                "article3 .";
+            max-width: 100%;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+
+            h3 {
+                grid-area: h3;
+            }
+
+            article {
+                width: 100%;
+            }
+        }
+
+        article details {
+            display: flex;
+            flex-direction: column;
+
+            .summary {
+                font-size: ab.$bodyM - 2px;
+
+                @include ab.breakpoint(tablet) {
+                    font-size: ab.$bodyM + 2px; 
+                }
+            }
+
+            .details__content {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                
+                picture {
+                    display: flex;
+    
+                    img {
+                        width: 100%;
+                        max-width: 500px;
+                        margin: 5px auto;
+                    }
+                }
+            }
+        }
+    }
+}

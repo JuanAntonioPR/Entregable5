@@ -1,6 +1,6 @@
 @use "../abstracts/abstracts" as ab;
 
-.footer, .footer__especial {
+.footer {
     background-color: ab.$color-azul-oscuro;
     display: flex;
     flex-direction: column;

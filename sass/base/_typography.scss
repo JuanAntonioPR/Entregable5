@@ -23,6 +23,16 @@ h2 {
     }
 }
 
+h3 {
+    font-size: ab.$headingM;
+    padding: 20px 0px;
+    color: ab.$color-azul-oscuro;
+
+    @include ab.breakpoint(tablethorizontal) {
+        font-size: ab.$headingM + 4px;
+    }
+}
+
 p {
     font-size: ab.$bodyM;
 
