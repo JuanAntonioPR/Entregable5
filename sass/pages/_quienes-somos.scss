@@ -59,6 +59,13 @@
                         width: 100%;
                         max-width: 500px;
                         margin: 5px auto;
+
+                        @include ab.breakpoint(tablethorizontal) {
+                            width: 440px;
+                            height: 440px;
+                            object-fit: cover;
+                            object-position: top;
+                        }
                     }
                 }
             }
