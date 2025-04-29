@@ -17,3 +17,10 @@ const nav = document.querySelector(".nav");
 hamburger.addEventListener("click", () => {
   nav.classList.toggle("active");
 });
+
+// Card flip cursos
+document.querySelectorAll(".course-card").forEach(card => {
+  card.addEventListener("click", () => {
+    card.classList.toggle("flipped");
+  });
+});

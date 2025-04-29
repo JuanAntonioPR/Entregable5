@@ -1,0 +1,82 @@
+@use "../abstracts/abstracts" as ab;
+
+.container__cursos {
+    .description {
+        display: flex;
+        flex-direction: column;
+        background-color: ab.$color-bg-claro1;
+        padding: 20px;
+        gap: 20px;
+    }
+  
+    .courses {
+        padding-bottom: 50px;
+
+        h3 {
+            font-size: ab.$headingM;
+        }
+  
+        .courses__list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+  
+            .course-card {
+                width: 100%;
+                max-width: 350px;
+                height: 350px;
+                perspective: 1000px;
+                margin: 1rem;
+  
+                &.flipped .card-inner {
+                    transform: rotateY(180deg);
+                }
+  
+                .card-inner {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    transition: transform 0.8s;
+                    transform-style: preserve-3d;
+                    cursor: pointer;
+                }
+  
+                .card-front,
+                .card-back {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    padding: 1rem;
+                    border-radius: 10px;
+                    backface-visibility: hidden;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                }
+  
+                .card-front {
+                    background-color: ab.$color-bg-claro1;;
+                }
+  
+                .card-back {
+                    background-color: ab.$color-bg-claro2;
+                    transform: rotateY(180deg);
+
+                    p {
+                        @include ab.breakpoint(tablet) {
+                            font-size: ab.$bodyM;
+                        }
+
+                        @include ab.breakpoint(desktop) {
+                            font-size: ab.$bodyM + 2px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+} 
