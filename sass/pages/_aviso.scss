@@ -1,0 +1,11 @@
+@use "../abstracts/abstracts" as ab;
+
+.container__aviso {
+    .description {
+        display: flex;
+        flex-direction: column;
+        background-color: ab.$color-bg-claro1;
+        padding: 20px 20px 40px 20px;
+        gap: 20px;
+    }
+}

@@ -1,0 +1,35 @@
+@use "../abstracts/abstracts" as ab;
+
+.container__politica-privacidad {
+    .description {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 40px;
+        
+        div {
+            padding: 20px;
+
+            p {
+                margin-bottom: 10px;
+            }
+
+            li {
+                margin-left: 16px;
+                margin-bottom: 10px;
+                padding-left: 10px;
+
+                @include ab.breakpoint(tablethorizontal) {
+                    font-size: ab.$bodyL;
+                }
+
+                @include ab.breakpoint(desktop) {
+                    font-size: ab.$bodyL + 4px;
+                }
+            }
+        }
+
+        div:nth-of-type(odd) {
+            background-color: ab.$color-bg-claro1;
+        }
+    }
+}

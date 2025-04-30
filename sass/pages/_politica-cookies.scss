@@ -1,0 +1,31 @@
+@use "../abstracts/abstracts" as ab;
+
+.container__politica-cookies {
+    .description {
+        display: flex;
+        flex-direction: column;
+        background-color: ab.$color-bg-claro1;
+        padding: 20px 20px 40px 20px;
+        gap: 20px;
+    }
+
+    .cookies {
+        display: flex;
+        flex-direction: column;
+        background-color: ab.$color-blanco;
+        padding: 20px 20px 40px 20px;
+        gap: 20px;
+
+        li {
+            list-style: none;
+
+            @include ab.breakpoint(tablethorizontal) {
+                font-size: ab.$bodyL;
+            }
+        }
+
+        .cookies__list li {
+            margin-top: 16px;
+        }
+    }
+}
