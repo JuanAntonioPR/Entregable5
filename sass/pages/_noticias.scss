@@ -1,0 +1,31 @@
+@use "../abstracts/abstracts" as ab;
+
+.container__noticias {
+    @include ab.breakpoint(desktop) {
+        padding-bottom: 80px;
+    }
+
+    h1 {
+        font-size: ab.$headingL;
+
+        @include ab.breakpoint(tablet) {
+            font-size: ab.$headingXL;
+        }
+
+        @include ab.breakpoint(desktop) {
+            font-size: ab.$headingXL + 6px;
+        }
+    }
+
+    .news {
+        display: flex;
+        flex-direction: column;
+        background-color: ab.$color-bg-claro1;
+        padding: 20px;
+        gap: 20px;
+
+        @include ab.breakpoint(tablet) {
+            padding: 30px;
+        }
+    }
+}
