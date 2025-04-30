@@ -1,0 +1,158 @@
+@use "../abstracts/abstracts" as ab;
+
+.container__cursos-dev {
+    
+    .description {
+        display: flex;
+        flex-direction: column;
+        background-color: ab.$color-bg-claro1;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .content {
+        padding: 20px;
+        
+        .table-container {
+            overflow-x: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(ab.$color-negro, 0.1);
+            padding: 10px;
+            background-color: ab.$color-bg-claro1;
+
+            table {
+                width: 100%;
+                min-width: 800px;
+                border-collapse: collapse;
+                background-color: ab.$color-bg-claro1;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 4px 15px rgba(ab.$color-negro, 0.1);
+        
+                caption {
+                    font-weight: bold;
+                    font-size: ab.$bodyM - 1px;
+                    margin: 15px 5px;
+                    text-align: left;
+                    padding: 8px;
+                    color: ab.$color-azul-oscuro;
+                }
+        
+                thead {
+                    background-color: ab.$color-azul-oscuro;
+                    color: ab.$color-blanco;
+        
+                    th {
+                        padding: 16px;
+                        text-align: left;
+                        font-size: ab.$bodyS;
+                    }
+                }
+        
+                tbody {
+                    tr {
+                        &:nth-child(even) {
+                            background-color: ab.$color-bg-claro2;
+                        }
+        
+                        td {
+                            padding: 16px;
+                            vertical-align: top;
+                            font-size: ab.$bodyS;
+        
+                            strong {
+                                font-weight: bold;
+                            }
+        
+                            a {
+                                color: ab.$color-azul-oscuro;
+                                font-weight: bold;
+                                text-decoration: underline;
+                                transition: color 0.3s ease;
+        
+                                &:hover {
+                                    color: ab.$color-azul-claro;
+                                }
+                            }
+                        }
+
+                        .encabezado1 {
+                            background-color: ab.$color-bg-claro1;
+                        }
+
+                        .encabezado2 {
+                            background-color: ab.$color-bg-claro2;
+                        }
+                    }
+                }
+        
+                tfoot {
+                    background-color: lightgrey;
+        
+                    td {
+                        padding: 16px;
+                        font-weight: bold;
+                        font-size: ab.$bodyS;
+                    }
+                }
+            }
+        }
+    }
+    
+    .prices {
+        display: flex;
+        flex-direction: column;
+        background-color: ab.$color-bg-claro1;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .tutor {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 20px 50px 20px;
+        gap: 10px;
+
+        article {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            gap: 30px;
+            box-shadow: 2px 2px 6px ab.$color-bg-claro2;
+            border-radius: 15px;
+            background-color: ab.$color-bg-claro1;
+
+            h4 {
+                @include ab.breakpoint(tablet) {
+                    font-size: ab.$headingM;
+                }
+
+                @include ab.breakpoint(tablethorizontal) {
+                    font-size: ab.$headingL;
+                }
+            }
+
+            picture {
+                align-self: center;
+                
+                img {
+                    width: 300px;
+
+                    @include ab.breakpoint(tablet) {
+                        width: 400px;
+                    }
+
+                    @include ab.breakpoint(tablethorizontal) {
+                        width: 500px;
+                    }
+                }
+            }
+        }
+        
+        article:nth-of-type(2) {
+            background-color: ab.$color-bg-claro2;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+}
