@@ -71,8 +71,8 @@
                             font-size: ab.$bodyM;
                         }
 
-                        @include ab.breakpoint(desktop) {
-                            font-size: ab.$bodyM + 2px;
+                        &:last-child {
+                            margin-top: 20px;
                         }
                     }
                 }

@@ -1,0 +1,62 @@
+@use "../abstracts/abstracts" as ab;
+
+.container__blog {
+    .description {
+        display: flex;
+        flex-direction: column;
+        background-color: ab.$color-bg-claro1;
+        padding: 20px 20px 40px 20px;
+        gap: 20px;
+
+        @include ab.breakpoint(tablethorizontal) {
+            display: grid;
+            gap: 20px;
+            grid-template-areas: 
+            "p p"
+            "article1 article2";
+
+            > p {
+                grid-area: p;
+            }
+
+            .article1 {
+                grid-area: article1;
+            }
+
+            .article2 {
+                grid-area: article2;
+            }
+        }
+
+        article {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+            background-color: ab.$color-bg-claro1-lighten;
+            padding: 15px;
+            border-radius: 15px;
+            gap: 5px;
+
+            @include ab.breakpoint(tablethorizontal) {
+                gap: 15px;
+            }
+
+            p {
+                @include ab.breakpoint(tablethorizontal) {
+                    font-size: ab.$bodyL;
+                }
+
+                a {
+                    font-weight: bold;
+                    color: ab.$color-azul-oscuro;
+                    transition: color 0.3s ease;
+                    text-decoration: none;
+            
+                    &:hover {
+                        color: ab.$color-azul-claro;
+                    }
+                }
+            }
+        }
+    }
+}
