@@ -112,3 +112,21 @@
     color: v.$color-blanco;
   }
 }
+
+@mixin button_form {
+  padding: 10px;
+  background-color: v.$color-bg-claro1;
+  border: 2px solid v.$color-azul-oscuro;
+  border-radius: 15px;
+  box-shadow: 2px 2px 4px v.$color-bg-claro2;
+  transition: transform 0.2s ease-in-out;
+  color: v.$color-azul-oscuro;
+
+  &:hover {
+    cursor: pointer;
+    background-color: v.$color-bg-claro2;
+    border-color: v.$color-azul-oscuro;
+    color: v.$color-azul-oscuro;
+    transform: scale(1.10);
+  }
+}
