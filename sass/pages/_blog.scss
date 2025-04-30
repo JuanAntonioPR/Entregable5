@@ -28,6 +28,10 @@
             }
         }
 
+        @include ab.breakpoint(desktop) {
+            margin-bottom: 50px;
+        }
+
         article {
             display: flex;
             flex-direction: column;

@@ -1,17 +1,17 @@
 @use "../abstracts/abstracts" as ab;
 
 .container__registro {
-    .description {
+    .form {
         display: flex;
         flex-direction: column;
         background-color: ab.$color-bg-claro1;
-        padding: 20px;
+        padding: 20px 20px 40px 20px;
         gap: 20px;
-    }
 
-    .form {
-        padding: 20px 20px;
-      
+        @include ab.breakpoint(desktop) {
+            margin-bottom: 50px;
+        }
+     
         .form__container {
             overflow-x: auto;
             border-radius: 10px;
@@ -19,6 +19,7 @@
             padding: 20px 10px;
             max-width: 500px;
             margin: 0 auto;
+            background-color: ab.$color-blanco;
 
             fieldset {
                 border: none;
