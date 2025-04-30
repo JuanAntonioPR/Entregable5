@@ -1,0 +1,103 @@
+<!doctype html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Contacto</title>  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="/Entregable5/assets/main-Caq_ula1.js"></script>
+    <link rel="stylesheet" crossorigin href="/Entregable5/assets/main-CSQ3LyVS.css">
+  </head>
+  <body>
+    <header class="header">
+      <a href="../index.html" class="logo">
+        <img src="/Entregable5/assets/logo-DDLV-dB_.png" width="200" height="auto" alt="Logo de ConquerBlocks">
+      </a>
+      <button class="hamburger" id="hamburger">
+        <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20448%20512'%3e%3c!--!Font%20Awesome%20Free%206.7.2%20by%20@fontawesome%20-%20https://fontawesome.com%20License%20-%20https://fontawesome.com/license/free%20Copyright%202025%20Fonticons,%20Inc.--%3e%3cpath%20d='M0%2096C0%2078.3%2014.3%2064%2032%2064l384%200c17.7%200%2032%2014.3%2032%2032s-14.3%2032-32%2032L32%20128C14.3%20128%200%20113.7%200%2096zM0%20256c0-17.7%2014.3-32%2032-32l384%200c17.7%200%2032%2014.3%2032%2032s-14.3%2032-32%2032L32%20288c-17.7%200-32-14.3-32-32zM448%20416c0%2017.7-14.3%2032-32%2032L32%20448c-17.7%200-32-14.3-32-32s14.3-32%2032-32l384%200c17.7%200%2032%2014.3%2032%2032z'/%3e%3c/svg%3e" alt="Menú">
+      </button>
+      <nav class="nav">
+        <ul>
+          <li><a href="../index.html" class="button">Home</a></li>
+          <li><a href="quienes_somos.html" class="button">Quienes somos</a></li>
+          <li><a href="cursos.html" class="button">Cursos</a></li>
+          <li><a href="blog.html" class="button">Blog</a></li>
+          <li><a href="registro.html" class="button">Registro</a></li>
+          <li><a href="login.html" class="button">Login</a></li>
+          <li><a href="contacto.html" class="button_contact">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container container__contacto">
+      <main>
+        <h1>Contacto</h1>
+        <section class="description">
+          <h2>Dirección y formas de contacto</h2>
+          <p>Puedes contactar con nosotros de diferentes maneras. No dudes en hacerlo, estaremos encantados de atenderte.</p>
+          <article>
+            <dl>
+              <dt>Dirección:</dt>
+              <dd>Plaza Mayor, nº 1. C:P. 28001, Madrid (España)</dd>
+
+              <dt>C.I.F.:</dt>
+              <dd>X12309123</dd>
+
+              <dt>Teléfono de contacto:</dt>
+              <dd>
+                <a href="tel:666123123">666 123 123</a> (móvil) - 
+                <a href="tel:918123123">918 123 123</a> (oficina)
+              </dd>
+
+              <dt>email:</dt>
+              <dd>
+                <a href="mailto:academiaconquerblocks@miweb.com">academiaconquerblocks@miweb.com</a>
+              </dd>
+            </dl>
+          </article>
+        </section>
+        <section class="maps">
+          <h2>Mapa</h2>
+          <p>Ubicación de la academia:</p>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1902.6187532430997!2d-3.708933641781362!3d40.41513652805692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42287ed85fe0d9%3A0xd202c4f0d67625e8!2sPlaza%20Mayor%2C%20Centro%2C%20Madrid!5e0!3m2!1ses!2ses!4v1735923359901!5m2!1ses!2ses" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+        <section class="form">
+          <h2>Formulario de Contacto</h2>
+          <p>Rellena este formulario para ponerte en contacto con nosotros. Te responderemos a la mayor brevedad posible.</p>
+          <form class="form__container" action="https://www.miweb.com/contacto" method="post">
+            <fieldset>
+              <legend>Consultanos tus dudas:</legend>
+              <div>
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ramón López Moreno" minlength="6" maxlength="26" size="26" required>
+              </div>
+              <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" minlength="5" maxlength="50" placeholder="usuario@ejemplo.com" size="37" required>
+              </div>
+              <div>
+                <label for="consulta">Consulta:</label>
+                <textarea id="consulta" name="consulta" cols="27" rows="4" maxlength="500" required></textarea>
+              </div>
+              <div class="buttons">
+                <button class="button_form" type="submit">Enviar</button>
+              </div>
+            </fieldset>
+          </form>
+        </section>
+      </main>
+    </div>
+    <footer class="footer">
+      <h4>Aviso legal:</h4>
+      <nav class="footer__nav">
+        <ul>
+          <li><a href="aviso_sobre_cookies.html">AVISO SOBRE COOKIES</a></li>
+          <li><a href="politica_de_cookies.html">POLÍTICA DE COOKIES</a></li>
+          <li><a href="politica_de_privacidad.html">POLÍTICA DE PRIVACIDAD</a></li>
+        </ul>
+      </nav>
+      <p>&copy; Juan Antonio Peñalver Rodríguez - 2025</p>
+    </footer>
+  </body>
+</html>
